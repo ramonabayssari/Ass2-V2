@@ -33,6 +33,3 @@ This is a web-based implementation of the classic Minesweeper game. Players can 
 ## How to Play Locally
 1. Download the project files.
 2. Open `index.html` in your preferred web browser.
-
-## License
-This project is licensed under the MIT License.
