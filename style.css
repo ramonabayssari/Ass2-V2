@@ -1,0 +1,218 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+}
+
+.player-info {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Main Game Area */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.timer {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.gameboard {
+  display: grid;
+  gap: 2px;
+  background-color: #333;
+  padding: 10px;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #888;
+  border: 1px solid #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.cell.revealed {
+  background-color: #eee;
+  cursor: default;
+  border: 1px solid #bbb;
+}
+
+.cell.mine {
+  background-color: red;
+}
+
+.cell.flagged {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+/* Sidebar for Top Scores */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.level-score {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+/* Footer Section */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  main {
+      max-width: 95%;
+  }
+
+  .sidebar {
+      width: 150px;
+  }
+
+  .player-info {
+      flex-direction: column;
+  }
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #888;
+  border: 1px solid #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.cell.revealed {
+  background-color: #eee;
+  cursor: default;
+  border: 1px solid #bbb;
+}
+
+.cell.mine {
+  background-color: red;
+}
+
+.cell.flagged {
+  background-color: #ffa500;
+  color: #fff;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #888;
+  border: 1px solid #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.cell.flagged {
+  background-color: #ffa500;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.cell.revealed {
+  background-color: #eee;
+  cursor: default;
+  border: 1px solid #bbb;
+}
+
+.cell.revealed-mine {
+  background-color: red;
+  color: white;
+  font-size: 20px;
+}

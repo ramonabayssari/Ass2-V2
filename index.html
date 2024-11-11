@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>💣MINESWEEPER💣</h1>
+        <div class="player-info">
+            <label for="playername">Player Name:</label>
+            <input type="text" id="playername" placeholder="Enter your name">
+            <label for="gamelevel">Game Level:</label>
+            <select id="gamelevel">
+                <option value="Default">Select Level</option>
+                <option value="Easy">Easy</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Hard">Hard</option>
+            </select>
+            <button id="startButton">Start Game</button>
+             <!-- Testing Button for Winning the Game Password: iam@cheater-->
+             <button id="revealMinesButton">Win Game</button>
+             <!-- Go Back To The Rules Tab -->
+             <button id="helpButton">Help</button>
+        </div>
+    </header>
+
+   
+    <div class="test-buttons">
+        <p id="timer" style="font-size: 2em; font-weight: bold; color: red;">Time: 0 seconds</p>
+    </div>
+    <!-- Main Game Area -->
+    <main>
+        
+        <div id="gameboard" class="gameboard">
+            <div class="instructions" style="background-color: aliceblue;">
+                <h3>How to Play</h3>
+                <ul>
+                    <p>Left click to sweep the area</p>
+                    <p>🚩 Right-click erect flag 🚩</p>
+                    <p>❌ Wrong flag denoted with ❌</p>
+                    <p>💣 The game ends when all safe cells are revealed, or a mine is triggered. 💣</p>
+                    <p>🏆 Use the "Win Game" button to test! 🏆</p>
+                </ul>
+            </div>
+            <!-- Minesweeper board will be dynamically generated here -->
+        </div>
+    </main>
+
+    <!-- Sidebar for Top Scores and Instructions -->
+    <aside class="sidebar">
+        <h2>Top 3 Records</h2>
+        <div id="scores">
+            <div class="level-score" id="easy-scores">
+                <h3>Level Easy</h3>
+                <ul id="easy-score-list">
+                    <li>1. - -</li>
+                    <li>2. - -</li>
+                    <li>3. - -</li>
+                </ul>
+            </div>
+            <div class="level-score" id="intermediate-scores">
+                <h3>Level Intermediate</h3>
+                <ul id="intermediate-score-list">
+                    <li>1. - -</li>
+                    <li>2. - -</li>
+                    <li>3. - -</li>
+                </ul>
+            </div>
+            <div class="level-score" id="hard-scores">
+                <h3>Level Hard</h3>
+                <ul id="hard-score-list">
+                    <li>1. - -</li>
+                    <li>2. - -</li>
+                    <li>3. - -</li>
+                </ul>
+            </div>
+        </div>
+       
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Minesweeper Game. All rights reserved.</p>
+    </footer>
+    <script>
+        if (helpButton) {
+            helpButton.addEventListener("click", function () {
+                alert("How to Play:\n\n- Left click to sweep the area\n\n- 🚩 Right-click erect flag 🚩\n\n- ❌ Wrong flag denoted with ❌\n\n- 💣 The game ends when all safe cells are revealed, or a mine is triggered. 💣\n\n- 🏆 Use the 'Win Game' button to test! 🏆\n\n- Password for Win Game: iam@cheater");
+            });
+        }
+    </script>
+</body>
+
+</html>
